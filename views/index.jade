@@ -5,8 +5,14 @@ block content
     div.col-md-6.col-md-offset-3
       h1= title
       p Welcome to #{title}
-      form(action='/test/submit', method='post')
+      form(action='/submit', method='post')
         div.form-group
-          label(for='id') Numero:
-          input(name='id', type='number', id='id').form-control
-        input(type='submit', value='Submit').btn.btn-primary
+          label(for='email') Login:
+          input(name='email', type='text', id='email', placeholder='Login').form-control
+        div.form-group
+          label(for='password') Password:
+          input(name='password', type='password', id='password', placeholder='Password').form-control
+        div.form-group
+          label(for='passwordConfirm') Confirmation:
+          input(name='passwordConfirm', type='password', id='passwordConfirm' placeholder='Password Confirmation').form-control
+        input(type='submit', value='Create').btn.btn-success
